@@ -42,7 +42,7 @@ import { API_KEY } from '../../constants/constants'
 
   return (
     <div className="row">
-      <h2 className="">{title}</h2>
+      <h2 className="row_title">{title}</h2>
         <div className="row_posters">
            {
              movies.map((movie)=>(

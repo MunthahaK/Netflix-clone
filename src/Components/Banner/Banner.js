@@ -21,22 +21,28 @@ function Banner() {
   
   
   return (
+    
     <div className="banner"
       style={{
         backgroundSize : "cover",
-        backgroundImage : `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`
+        backgroundImage : `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
+        backgroundPosition : "center",
+        backgroundAttachment : "fixed",
       }}>
-     
+     <div className='fade'>
      <div className='banner_contents'>
        <h1 className='banner_title'>{movie?.title || movie?.name || movie?.original_name}</h1>
        <div className='banner_buttons'>
          <button className='banner_button'>Play</button>
          <button className='banner_button'>My List</button>
        </div>
-       <h1 className='banner_description'>{movie?.overview}</h1>
+       <h1 className='banner_description'>{movie?.overview}</h1> 
      </div>
      <div className='banner_fadeBottom'></div>
-    </div>
+     </div>
+    
+     </div>
+     
   )
 }
 
